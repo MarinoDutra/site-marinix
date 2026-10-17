@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marino Dutra — Desenvolvedor full stack</title>
+  <meta name="description" content="Marino Dutra, desenvolvedor full stack em São Luís. Next.js, Java, Spring Boot, MySQL e Docker.">
+  <meta property="og:title" content="Marino Dutra — Desenvolvedor full stack">
+  <meta property="og:description" content="Eu construo sistemas web que vão do banco ao deploy.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#101114">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="topbar mono">
+      <span>marino dutra</span>
+      <a class="topbar__cta" href="mailto:marinomartinsd@gmail.com">disponível para projetos ↗</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow mono">desenvolvedor full stack</p>
+        <h1 class="hero__name">Marino<br><span class="accent">Dutra.</span></h1>
+        <p class="hero__tagline">Eu construo sistemas web que vão do banco ao deploy.</p>
+
+        <div class="hero__about">
+          <p class="lead">Sou o Marino, desenvolvedor full stack em São Luís. Trabalho com Next.js, Java/Spring Boot e MySQL, e gosto da parte que ninguém vê: modelagem de dados, segurança e infraestrutura.</p>
+          <dl class="facts">
+            <dt class="mono">foco</dt><dd>Full stack · back-end</dd>
+            <dt class="mono">cidade</dt><dd>São Luís, MA</dd>
+            <dt class="mono">formação</dt><dd>Engenharia de Computação · Universidade Ceuma</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section class="project" id="incode">
+        <div class="project__meta mono">
+          <p class="accent">projeto em destaque</p>
+          <p class="muted">Next.js · Prisma · MySQL · Docker · Mercado Pago</p>
+        </div>
+        <h2 class="project__name">InCode</h2>
+        <p class="project__intro">A landing page e o sistema de inscrições do InCode: a pessoa se inscreve, envia a declaração em PDF, paga pelo Mercado Pago e a equipe acompanha tudo num só lugar.</p>
+
+        <ol class="flow" aria-label="Fluxo da inscrição">
+          <li>
+            <span class="mono accent">01</span>
+            <strong>Inscrição</strong>
+            <span class="muted">Formulário salva os dados direto no MySQL.</span>
+          </li>
+          <li>
+            <span class="mono accent">02</span>
+            <strong>Declaração</strong>
+            <span class="muted">Upload do PDF de até 5 MB, guardado no banco e nunca público.</span>
+          </li>
+          <li>
+            <span class="mono accent">03</span>
+            <strong>Pagamento</strong>
+            <span class="muted">Checkout no Mercado Pago, confirmado por webhook assinado.</span>
+          </li>
+          <li>
+            <span class="mono accent">04</span>
+            <strong>Acompanhamento</strong>
+            <span class="muted">Downloads por links assinados que expiram em 7 dias.</span>
+          </li>
+        </ol>
+
+        <h3 class="section-title">O que fizemos</h3>
+        <div class="work">
+          <div class="work__item">
+            <h4>Saímos do Supabase</h4>
+            <p>Migramos inscrições e arquivos para um MySQL próprio usando Prisma. O projeto deixou de depender de um serviço externo e passou a rodar inteiro na nossa infraestrutura.</p>
+          </div>
+          <div class="work__item">
+            <h4>Migrations que funcionam do zero</h4>
+            <p>A primeira migration registra a estrutura antiga de inscrições; a segunda adapta os campos e cria o armazenamento de declarações. Funciona tanto num banco vazio quanto no banco que já estava em produção.</p>
+          </div>
+          <div class="work__item">
+            <h4>Arquivos privados de verdade</h4>
+            <p>Os PDFs ficam no banco e só saem por links assinados com uma chave secreta, válidos por sete dias. Credenciais nunca vão para o front-end.</p>
+          </div>
+          <div class="work__item">
+            <h4>Deploy com Docker</h4>
+            <p>O Docker Compose se conecta ao MySQL que já existia no servidor, sem criar outro banco. As migrations rodam antes de liberar o tráfego, e testes e build validam cada versão.</p>
+          </div>
+        </div>
+
+        <a class="button" href="https://incode-tech-school.com.br/" target="_blank" rel="noopener">Ver o site no ar ↗</a>
+      </section>
+
+      <section class="stack">
+        <h2 class="section-title">Com o que eu trabalho</h2>
+        <p class="lead">Next.js · Java · Spring Boot · MySQL · Prisma · Docker · PHP · Python · C/C++ · Git · Bootstrap</p>
+      </section>
+    </main>
+  </div>
+
+  <section class="contact" id="contato">
+    <div class="container contact__inner">
+      <div class="contact__text">
+        <h2>Tem um projeto<br>em mente?</h2>
+        <a class="contact__email" href="mailto:marinomartinsd@gmail.com">marinomartinsd@gmail.com</a>
+        <nav class="contact__links mono" aria-label="Redes">
+          <a href="https://github.com/MarinoDutra" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/marinodutra" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/marino__dutra" target="_blank" rel="noopener">Instagram</a>
+        </nav>
+      </div>
+      <a class="contact__qr" href="https://www.instagram.com/marino__dutra" target="_blank" rel="noopener">
+        <img src="assets/qr-instagram.webp" alt="QR code do Instagram @marino__dutra" width="176" height="200">
+      </a>
+    </div>
+  </section>
+
+  <footer class="container footer mono">
+    <span>© 2026 Marino Dutra</span>
+    <span>São Luís, MA</span>
+  </footer>
+</body>
+</html>
